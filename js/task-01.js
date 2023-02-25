@@ -1,13 +1,9 @@
-console.log(document);
+const categories = document.querySelectorAll('.item');
 
-const body = document.body;
-console.log(body);
-
-const list = body.firstElementChild;
-console.log(list);
-
-const firstListItem = list.firstElementChild;
-console.log(firstListItem);
-
-const listItems = list.children;
-console.log(listItems);
+console.log('Number of categories', categories.length);
+console.log('');
+categories.forEach((elemement) => {
+    console.log('Category:', elemement.firstElementChild.textContent)
+    console.log('Elements:', elemement.lastElementChild.children.length)
+    console.log('')
+})
